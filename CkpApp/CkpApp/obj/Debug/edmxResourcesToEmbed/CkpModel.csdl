@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CkpModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="CkpEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BaoCaoNgay" EntityType="CkpModel.BaoCaoNgay" />
+    <EntitySet Name="CongTrinh" EntityType="CkpModel.CongTrinh" />
+    <EntitySet Name="DonGiaBom" EntityType="CkpModel.DonGiaBom" />
+    <EntitySet Name="KhachHang" EntityType="CkpModel.KhachHang" />
+    <EntitySet Name="MayBom" EntityType="CkpModel.MayBom" />
+    <EntitySet Name="NguoiLienHe" EntityType="CkpModel.NguoiLienHe" />
+    <EntitySet Name="NhanVien" EntityType="CkpModel.NhanVien" />
+    <AssociationSet Name="FK__BaoCaoNga__CongT__21B6055D" Association="CkpModel.FK__BaoCaoNga__CongT__21B6055D">
+      <End Role="CongTrinh" EntitySet="CongTrinh" />
+      <End Role="BaoCaoNgay" EntitySet="BaoCaoNgay" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BaoCaoNga__Khach__22AA2996" Association="CkpModel.FK__BaoCaoNga__Khach__22AA2996">
+      <End Role="KhachHang" EntitySet="KhachHang" />
+      <End Role="BaoCaoNgay" EntitySet="BaoCaoNgay" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BaoCaoNga__MayBo__20C1E124" Association="CkpModel.FK__BaoCaoNga__MayBo__20C1E124">
+      <End Role="MayBom" EntitySet="MayBom" />
+      <End Role="BaoCaoNgay" EntitySet="BaoCaoNgay" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BaoCaoNga__Nguoi__1FCDBCEB" Association="CkpModel.FK__BaoCaoNga__Nguoi__1FCDBCEB">
+      <End Role="NhanVien" EntitySet="NhanVien" />
+      <End Role="BaoCaoNgay" EntitySet="BaoCaoNgay" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CongTrinh__Khach__145C0A3F" Association="CkpModel.FK__CongTrinh__Khach__145C0A3F">
+      <End Role="KhachHang" EntitySet="KhachHang" />
+      <End Role="CongTrinh" EntitySet="CongTrinh" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DonGiaBom__CongT__6166761E" Association="CkpModel.FK__DonGiaBom__CongT__6166761E">
+      <End Role="CongTrinh" EntitySet="CongTrinh" />
+      <End Role="DonGiaBom" EntitySet="DonGiaBom" />
+    </AssociationSet>
+    <AssociationSet Name="FK__NguoiLien__Khach__173876EA" Association="CkpModel.FK__NguoiLien__Khach__173876EA">
+      <End Role="KhachHang" EntitySet="KhachHang" />
+      <End Role="NguoiLienHe" EntitySet="NguoiLienHe" />
+    </AssociationSet>
+    <EntitySet Name="ViTriBom" EntityType="CkpModel.ViTriBom" />
+    <AssociationSet Name="FK__CongTrinh__Nguoi__1E6F845E" Association="CkpModel.FK__CongTrinh__Nguoi__1E6F845E">
+      <End Role="NhanVien" EntitySet="NhanVien" />
+      <End Role="CongTrinh" EntitySet="CongTrinh" />
+    </AssociationSet>
+    <EntitySet Name="NhanLuc_BaoCao" EntityType="CkpModel.NhanLuc_BaoCao" />
+    <AssociationSet Name="FK__NhanLuc_B__BaoCa__35BCFE0A" Association="CkpModel.FK__NhanLuc_B__BaoCa__35BCFE0A">
+      <End Role="BaoCaoNgay" EntitySet="BaoCaoNgay" />
+      <End Role="NhanLuc_BaoCao" EntitySet="NhanLuc_BaoCao" />
+    </AssociationSet>
+    <AssociationSet Name="FK__NhanLuc_B__NhanV__36B12243" Association="CkpModel.FK__NhanLuc_B__NhanV__36B12243">
+      <End Role="NhanVien" EntitySet="NhanVien" />
+      <End Role="NhanLuc_BaoCao" EntitySet="NhanLuc_BaoCao" />
+    </AssociationSet>
+    <EntitySet Name="ViTriBom_BaoCao" EntityType="CkpModel.ViTriBom_BaoCao" />
+    <AssociationSet Name="FK__ViTriBom___BaoCa__2E1BDC42" Association="CkpModel.FK__ViTriBom___BaoCa__2E1BDC42">
+      <End Role="BaoCaoNgay" EntitySet="BaoCaoNgay" />
+      <End Role="ViTriBom_BaoCao" EntitySet="ViTriBom_BaoCao" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ViTriBom___DonGi__0697FACD" Association="CkpModel.FK__ViTriBom___DonGi__0697FACD">
+      <End Role="DonGiaBom" EntitySet="DonGiaBom" />
+      <End Role="ViTriBom_BaoCao" EntitySet="ViTriBom_BaoCao" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ViTriBom___ViTri__2F10007B" Association="CkpModel.FK__ViTriBom___ViTri__2F10007B">
+      <End Role="ViTriBom" EntitySet="ViTriBom" />
+      <End Role="ViTriBom_BaoCao" EntitySet="ViTriBom_BaoCao" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="BaoCaoNgay">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NgayBaoCao" Type="DateTime" Precision="7" />
+    <Property Name="NguoiBaoCaoId" Type="Int32" />
+    <Property Name="MayBomId" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CongTrinhId" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="KhachHangId" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="GhiChu" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="TrangThai" Type="Int32" />
+    <Property Name="NgayTao" Type="DateTime" Precision="7" />
+    <Property Name="NgaySuaCuoi" Type="DateTime" Precision="7" />
+    <NavigationProperty Name="CongTrinh" Relationship="CkpModel.FK__BaoCaoNga__CongT__21B6055D" FromRole="BaoCaoNgay" ToRole="CongTrinh" />
+    <NavigationProperty Name="KhachHang" Relationship="CkpModel.FK__BaoCaoNga__Khach__22AA2996" FromRole="BaoCaoNgay" ToRole="KhachHang" />
+    <NavigationProperty Name="MayBom" Relationship="CkpModel.FK__BaoCaoNga__MayBo__20C1E124" FromRole="BaoCaoNgay" ToRole="MayBom" />
+    <NavigationProperty Name="NhanVien" Relationship="CkpModel.FK__BaoCaoNga__Nguoi__1FCDBCEB" FromRole="BaoCaoNgay" ToRole="NhanVien" />
+    <NavigationProperty Name="NhanLuc_BaoCao" Relationship="CkpModel.FK__NhanLuc_B__BaoCa__35BCFE0A" FromRole="BaoCaoNgay" ToRole="NhanLuc_BaoCao" />
+    <NavigationProperty Name="ViTriBom_BaoCao" Relationship="CkpModel.FK__ViTriBom___BaoCa__2E1BDC42" FromRole="BaoCaoNgay" ToRole="ViTriBom_BaoCao" />
+  </EntityType>
+  <EntityType Name="CongTrinh">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="SoHopDong" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="TenCongTrinh" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="KhachHangId" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="NgayKyHD" Type="DateTime" Precision="7" />
+    <Property Name="NgayThucHien" Type="DateTime" Precision="7" />
+    <Property Name="TrangThai" Type="Int32" />
+    <Property Name="NgayTao" Type="DateTime" Precision="7" />
+    <Property Name="NgaySuaCuoi" Type="DateTime" Precision="7" />
+    <NavigationProperty Name="BaoCaoNgay" Relationship="CkpModel.FK__BaoCaoNga__CongT__21B6055D" FromRole="CongTrinh" ToRole="BaoCaoNgay" />
+    <NavigationProperty Name="KhachHang" Relationship="CkpModel.FK__CongTrinh__Khach__145C0A3F" FromRole="CongTrinh" ToRole="KhachHang" />
+    <NavigationProperty Name="DonGiaBom" Relationship="CkpModel.FK__DonGiaBom__CongT__6166761E" FromRole="CongTrinh" ToRole="DonGiaBom" />
+    <Property Name="NguoiPhuTrachId" Type="Int32" />
+    <NavigationProperty Name="NhanVien" Relationship="CkpModel.FK__CongTrinh__Nguoi__1E6F845E" FromRole="CongTrinh" ToRole="NhanVien" />
+  </EntityType>
+  <EntityType Name="DonGiaBom">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CongTrinhId" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="TenDonGia" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DonGia" Type="Int32" />
+    <Property Name="DonGiaVAT" Type="Int32" />
+    <Property Name="VAT" Type="Int32" />
+    <Property Name="MinKlgBomCan" Type="Double" />
+    <Property Name="MinKlgBomTinh" Type="Double" />
+    <Property Name="CC1" Type="Int32" />
+    <Property Name="TongCC2" Type="Int32" />
+    <Property Name="PhanTramBackCC2" Type="Int32" />
+    <Property Name="TienBackCC2" Type="Int32" />
+    <Property Name="NetCC2" Type="Int32" />
+    <Property Name="TongThu" Type="Int32" />
+    <Property Name="TongVAT" Type="Int32" />
+    <Property Name="TongThuVAT" Type="Int32" />
+    <Property Name="TongCC" Type="Int32" />
+    <Property Name="GhiChu" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CongTrinh" Relationship="CkpModel.FK__DonGiaBom__CongT__6166761E" FromRole="DonGiaBom" ToRole="CongTrinh" />
+    <Property Name="TrangThai" Type="Int32" />
+    <Property Name="CongThuc" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="NgayTao" Type="DateTime" Precision="7" />
+    <Property Name="NgaySuaCuoi" Type="DateTime" Precision="7" />
+    <NavigationProperty Name="ViTriBom_BaoCao" Relationship="CkpModel.FK__ViTriBom___DonGi__0697FACD" FromRole="DonGiaBom" ToRole="ViTriBom_BaoCao" />
+  </EntityType>
+  <EntityType Name="KhachHang">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="TenCongTy" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="MaSoThue" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TrangThai" Type="Int32" />
+    <Property Name="NgayTao" Type="DateTime" Precision="7" />
+    <Property Name="NgaySuaCuoi" Type="DateTime" Precision="7" />
+    <NavigationProperty Name="BaoCaoNgay" Relationship="CkpModel.FK__BaoCaoNga__Khach__22AA2996" FromRole="KhachHang" ToRole="BaoCaoNgay" />
+    <NavigationProperty Name="CongTrinh" Relationship="CkpModel.FK__CongTrinh__Khach__145C0A3F" FromRole="KhachHang" ToRole="CongTrinh" />
+    <NavigationProperty Name="NguoiLienHe" Relationship="CkpModel.FK__NguoiLien__Khach__173876EA" FromRole="KhachHang" ToRole="NguoiLienHe" />
+  </EntityType>
+  <EntityType Name="MayBom">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="TenBom" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="LoaiBom" Type="Int32" />
+    <Property Name="TrangThai" Type="Int32" />
+    <Property Name="NgayTao" Type="DateTime" Precision="7" />
+    <Property Name="NgaySuaCuoi" Type="DateTime" Precision="7" />
+    <NavigationProperty Name="BaoCaoNgay" Relationship="CkpModel.FK__BaoCaoNga__MayBo__20C1E124" FromRole="MayBom" ToRole="BaoCaoNgay" />
+  </EntityType>
+  <EntityType Name="NguoiLienHe">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HoTen" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Chucvu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SoDienThoai" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="GhiChu" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="KhachHangId" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="TrangThai" Type="Int32" />
+    <Property Name="NgayTao" Type="DateTime" Precision="7" />
+    <Property Name="NgaySuaCuoi" Type="DateTime" Precision="7" />
+    <NavigationProperty Name="KhachHang" Relationship="CkpModel.FK__NguoiLien__Khach__173876EA" FromRole="NguoiLienHe" ToRole="KhachHang" />
+  </EntityType>
+  <EntityType Name="NhanVien">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HoTen" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ChucVu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DiaChi" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="SoDienThoai" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="TrangThai" Type="Int32" />
+    <Property Name="NgayTao" Type="DateTime" Precision="7" />
+    <Property Name="NgaySuaCuoi" Type="DateTime" Precision="7" />
+    <NavigationProperty Name="BaoCaoNgay" Relationship="CkpModel.FK__BaoCaoNga__Nguoi__1FCDBCEB" FromRole="NhanVien" ToRole="BaoCaoNgay" />
+    <NavigationProperty Name="CongTrinh" Relationship="CkpModel.FK__CongTrinh__Nguoi__1E6F845E" FromRole="NhanVien" ToRole="CongTrinh" />
+    <NavigationProperty Name="NhanLuc_BaoCao" Relationship="CkpModel.FK__NhanLuc_B__NhanV__36B12243" FromRole="NhanVien" ToRole="NhanLuc_BaoCao" />
+  </EntityType>
+  <Association Name="FK__BaoCaoNga__CongT__21B6055D">
+    <End Type="CkpModel.CongTrinh" Role="CongTrinh" Multiplicity="0..1" />
+    <End Type="CkpModel.BaoCaoNgay" Role="BaoCaoNgay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CongTrinh">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BaoCaoNgay">
+        <PropertyRef Name="CongTrinhId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BaoCaoNga__Khach__22AA2996">
+    <End Type="CkpModel.KhachHang" Role="KhachHang" Multiplicity="0..1" />
+    <End Type="CkpModel.BaoCaoNgay" Role="BaoCaoNgay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhachHang">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BaoCaoNgay">
+        <PropertyRef Name="KhachHangId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BaoCaoNga__MayBo__20C1E124">
+    <End Type="CkpModel.MayBom" Role="MayBom" Multiplicity="0..1" />
+    <End Type="CkpModel.BaoCaoNgay" Role="BaoCaoNgay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MayBom">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BaoCaoNgay">
+        <PropertyRef Name="MayBomId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BaoCaoNga__Nguoi__1FCDBCEB">
+    <End Type="CkpModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
+    <End Type="CkpModel.BaoCaoNgay" Role="BaoCaoNgay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhanVien">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="BaoCaoNgay">
+        <PropertyRef Name="NguoiBaoCaoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CongTrinh__Khach__145C0A3F">
+    <End Type="CkpModel.KhachHang" Role="KhachHang" Multiplicity="0..1" />
+    <End Type="CkpModel.CongTrinh" Role="CongTrinh" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhachHang">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CongTrinh">
+        <PropertyRef Name="KhachHangId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DonGiaBom__CongT__6166761E">
+    <End Type="CkpModel.CongTrinh" Role="CongTrinh" Multiplicity="0..1" />
+    <End Type="CkpModel.DonGiaBom" Role="DonGiaBom" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CongTrinh">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="DonGiaBom">
+        <PropertyRef Name="CongTrinhId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__NguoiLien__Khach__173876EA">
+    <End Type="CkpModel.KhachHang" Role="KhachHang" Multiplicity="0..1" />
+    <End Type="CkpModel.NguoiLienHe" Role="NguoiLienHe" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhachHang">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NguoiLienHe">
+        <PropertyRef Name="KhachHangId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ViTriBom">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ViTri" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="TrangThai" Type="Int32" />
+    <Property Name="NgayTao" Type="DateTime" Precision="7" />
+    <Property Name="NgaySuaCuoi" Type="DateTime" Precision="7" />
+    <NavigationProperty Name="ViTriBom_BaoCao" Relationship="CkpModel.FK__ViTriBom___ViTri__2F10007B" FromRole="ViTriBom" ToRole="ViTriBom_BaoCao" />
+  </EntityType>
+  <Association Name="FK__CongTrinh__Nguoi__1E6F845E">
+    <End Type="CkpModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
+    <End Type="CkpModel.CongTrinh" Role="CongTrinh" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhanVien">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="CongTrinh">
+        <PropertyRef Name="NguoiPhuTrachId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="NhanLuc_BaoCao">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BaoCaoId" Type="Int32" />
+    <Property Name="NhanVienId" Type="Int32" />
+    <Property Name="KhoiLuongBom" Type="Double" />
+    <Property Name="DonGiaKhoi" Type="Int32" />
+    <NavigationProperty Name="BaoCaoNgay" Relationship="CkpModel.FK__NhanLuc_B__BaoCa__35BCFE0A" FromRole="NhanLuc_BaoCao" ToRole="BaoCaoNgay" />
+    <NavigationProperty Name="NhanVien" Relationship="CkpModel.FK__NhanLuc_B__NhanV__36B12243" FromRole="NhanLuc_BaoCao" ToRole="NhanVien" />
+  </EntityType>
+  <Association Name="FK__NhanLuc_B__BaoCa__35BCFE0A">
+    <End Type="CkpModel.BaoCaoNgay" Role="BaoCaoNgay" Multiplicity="0..1" />
+    <End Type="CkpModel.NhanLuc_BaoCao" Role="NhanLuc_BaoCao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BaoCaoNgay">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NhanLuc_BaoCao">
+        <PropertyRef Name="BaoCaoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__NhanLuc_B__NhanV__36B12243">
+    <End Type="CkpModel.NhanVien" Role="NhanVien" Multiplicity="0..1" />
+    <End Type="CkpModel.NhanLuc_BaoCao" Role="NhanLuc_BaoCao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NhanVien">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="NhanLuc_BaoCao">
+        <PropertyRef Name="NhanVienId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ViTriBom_BaoCao">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BaoCaoId" Type="Int32" />
+    <Property Name="ViTriId" Type="Int32" />
+    <Property Name="Tang" Type="Int32" />
+    <Property Name="SoLuong" Type="Double" />
+    <Property Name="DonVi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DonGia" Type="Double" />
+    <Property Name="DonGiaVat" Type="Double" />
+    <Property Name="GhiChu" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="DonGiaId" Type="Int32" />
+    <NavigationProperty Name="BaoCaoNgay" Relationship="CkpModel.FK__ViTriBom___BaoCa__2E1BDC42" FromRole="ViTriBom_BaoCao" ToRole="BaoCaoNgay" />
+    <NavigationProperty Name="DonGiaBom" Relationship="CkpModel.FK__ViTriBom___DonGi__0697FACD" FromRole="ViTriBom_BaoCao" ToRole="DonGiaBom" />
+    <NavigationProperty Name="ViTriBom" Relationship="CkpModel.FK__ViTriBom___ViTri__2F10007B" FromRole="ViTriBom_BaoCao" ToRole="ViTriBom" />
+  </EntityType>
+  <Association Name="FK__ViTriBom___BaoCa__2E1BDC42">
+    <End Type="CkpModel.BaoCaoNgay" Role="BaoCaoNgay" Multiplicity="0..1" />
+    <End Type="CkpModel.ViTriBom_BaoCao" Role="ViTriBom_BaoCao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BaoCaoNgay">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ViTriBom_BaoCao">
+        <PropertyRef Name="BaoCaoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ViTriBom___DonGi__0697FACD">
+    <End Type="CkpModel.DonGiaBom" Role="DonGiaBom" Multiplicity="0..1" />
+    <End Type="CkpModel.ViTriBom_BaoCao" Role="ViTriBom_BaoCao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DonGiaBom">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ViTriBom_BaoCao">
+        <PropertyRef Name="DonGiaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ViTriBom___ViTri__2F10007B">
+    <End Type="CkpModel.ViTriBom" Role="ViTriBom" Multiplicity="0..1" />
+    <End Type="CkpModel.ViTriBom_BaoCao" Role="ViTriBom_BaoCao" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ViTriBom">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ViTriBom_BaoCao">
+        <PropertyRef Name="ViTriId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

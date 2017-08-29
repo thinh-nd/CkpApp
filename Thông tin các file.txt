@@ -1,0 +1,7 @@
+﻿1. Hướng dẫn cài đặt phần mềm CKP.xlsx - Hướng dẫn cài đặt và cấu hình máy chủ, cùng với cách khắc phục một số lỗi hệ thống
+2. Thư mục 'Source code' - Mã nguồn phần mềm và bộ cài phần mềm
+	Trong mã nguồn phần mềm có 2 project
+	2.1 CkpApp - Project mã nguồn phần mềm
+	2.2 CkpSetup - Project bộ cài phần mềm
+3. CkpSetup.msi - File cài phần mềm
+4. ckp-new.bak - Database backup của phần mềm (không có dữ liệu), tên database: Ckp, dùng cho SQL Server 2012

@@ -1,0 +1,431 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E773B736-0DD2-47D9-B231-8EDA3F8BCA26}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CkpApp</RootNamespace>
+    <AssemblyName>CkpApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>F:\CkpApp\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>9</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>00258A3F3337D080E152761DDA48F5120D66087C</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>CkpApp_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPPlus, Version=4.0.5.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.4.0.5\lib\net20\EPPlus.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NCalc, Version=1.3.8.0, Culture=neutral, PublicKeyToken=973cde3f1cafed03, processorArchitecture=MSIL">
+      <HintPath>..\packages\ncalc.1.3.8\lib\NCalc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaoCaoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCaoForm.Designer.cs">
+      <DependentUpon>BaoCaoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCaoNgayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaoCaoNgayForm.Designer.cs">
+      <DependentUpon>BaoCaoNgayForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataManager.Designer.cs">
+      <DependentUpon>DataManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers.cs" />
+    <Compile Include="QuanLyBaoCaoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyBaoCaoForm.Designer.cs">
+      <DependentUpon>QuanLyBaoCaoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DonGiaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DonGiaForm.Designer.cs">
+      <DependentUpon>DonGiaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuaDonGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuaDonGia.Designer.cs">
+      <DependentUpon>SuaDonGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuaViTri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuaViTri.Designer.cs">
+      <DependentUpon>SuaViTri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuaNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuaNhanVien.Designer.cs">
+      <DependentUpon>SuaNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemCongTrinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemCongTrinh.Designer.cs">
+      <DependentUpon>ThemCongTrinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemDonGia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemDonGia.Designer.cs">
+      <DependentUpon>ThemDonGia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemViTri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemViTri.Designer.cs">
+      <DependentUpon>ThemViTri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemKhachHang.Designer.cs">
+      <DependentUpon>ThemKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaoCaoNgay.cs">
+      <DependentUpon>CkpModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ChiTietKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChiTietKhachHang.Designer.cs">
+      <DependentUpon>ChiTietKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CkpModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CkpModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CkpModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CkpModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CkpModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CkpModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="CongTrinh.cs">
+      <DependentUpon>CkpModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DonGiaBom.cs">
+      <DependentUpon>CkpModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KhachHang.cs">
+      <DependentUpon>CkpModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KhachHangForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KhachHangForm.Designer.cs">
+      <DependentUpon>KhachHangForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MayBom.cs">
+      <DependentUpon>CkpModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MayBomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MayBomForm.Designer.cs">
+      <DependentUpon>MayBomForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NguoiLienHe.cs">
+      <DependentUpon>CkpModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NhanLuc_BaoCao.cs">
+      <DependentUpon>CkpModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVien.cs">
+      <DependentUpon>CkpModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NhanVienForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanVienForm.Designer.cs">
+      <DependentUpon>NhanVienForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CongTrinhForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CongTrinhForm.Designer.cs">
+      <DependentUpon>CongTrinhForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuaCongTrinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuaCongTrinh.Designer.cs">
+      <DependentUpon>SuaCongTrinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuaKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuaKhachHang.Designer.cs">
+      <DependentUpon>SuaKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SuaMayBom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuaMayBom.Designer.cs">
+      <DependentUpon>SuaMayBom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemMayBom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemMayBom.Designer.cs">
+      <DependentUpon>ThemMayBom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemNhanVien.Designer.cs">
+      <DependentUpon>ThemNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViTriForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViTriForm.Designer.cs">
+      <DependentUpon>ViTriForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViTriBom.cs">
+      <DependentUpon>CkpModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ViTriBom_BaoCao.cs">
+      <DependentUpon>CkpModel.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BaoCaoForm.resx">
+      <DependentUpon>BaoCaoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCaoNgayForm.resx">
+      <DependentUpon>BaoCaoNgayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataManager.resx">
+      <DependentUpon>DataManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyBaoCaoForm.resx">
+      <DependentUpon>QuanLyBaoCaoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DonGiaForm.resx">
+      <DependentUpon>DonGiaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuaDonGia.resx">
+      <DependentUpon>SuaDonGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuaViTri.resx">
+      <DependentUpon>SuaViTri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuaNhanVien.resx">
+      <DependentUpon>SuaNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemCongTrinh.resx">
+      <DependentUpon>ThemCongTrinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemDonGia.resx">
+      <DependentUpon>ThemDonGia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemViTri.resx">
+      <DependentUpon>ThemViTri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemKhachHang.resx">
+      <DependentUpon>ThemKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChiTietKhachHang.resx">
+      <DependentUpon>ChiTietKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KhachHangForm.resx">
+      <DependentUpon>KhachHangForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MayBomForm.resx">
+      <DependentUpon>MayBomForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanVienForm.resx">
+      <DependentUpon>NhanVienForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CongTrinhForm.resx">
+      <DependentUpon>CongTrinhForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuaCongTrinh.resx">
+      <DependentUpon>SuaCongTrinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuaKhachHang.resx">
+      <DependentUpon>SuaKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuaMayBom.resx">
+      <DependentUpon>SuaMayBom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemMayBom.resx">
+      <DependentUpon>ThemMayBom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThemNhanVien.resx">
+      <DependentUpon>ThemNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViTriForm.resx">
+      <DependentUpon>ViTriForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="CkpModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>CkpModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="CkpApp_TemporaryKey.pfx" />
+    <None Include="CkpModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CkpModel.edmx</DependentUpon>
+      <LastGenOutput>CkpModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="CkpModel.edmx.diagram">
+      <DependentUpon>CkpModel.edmx</DependentUpon>
+    </None>
+    <None Include="CkpModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CkpModel.edmx</DependentUpon>
+      <LastGenOutput>CkpModel.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b63806da419c456fbc7e16ea0c047c63" Name="Diagram1">
+        <EntityTypeShape EntityType="CkpModel.BaoCaoNgay" Width="1.5" PointX="3" PointY="8" />
+        <EntityTypeShape EntityType="CkpModel.CongTrinh" Width="1.5" PointX="6" PointY="8.125" />
+        <EntityTypeShape EntityType="CkpModel.DonGiaBom" Width="1.5" PointX="8.25" PointY="7.25" />
+        <EntityTypeShape EntityType="CkpModel.KhachHang" Width="1.5" PointX="0.75" PointY="8.5" />
+        <EntityTypeShape EntityType="CkpModel.MayBom" Width="1.5" PointX="0.75" PointY="4.875" />
+        <EntityTypeShape EntityType="CkpModel.NguoiLienHe" Width="1.5" PointX="0.75" PointY="12.75" />
+        <EntityTypeShape EntityType="CkpModel.NhanVien" Width="1.5" PointX="3.75" PointY="12.75" />
+        <AssociationConnector Association="CkpModel.FK__BaoCaoNga__CongT__21B6055D" />
+        <AssociationConnector Association="CkpModel.FK__BaoCaoNga__Khach__22AA2996" />
+        <AssociationConnector Association="CkpModel.FK__BaoCaoNga__MayBo__20C1E124" />
+        <AssociationConnector Association="CkpModel.FK__BaoCaoNga__Nguoi__1FCDBCEB" />
+        <AssociationConnector Association="CkpModel.FK__CongTrinh__Khach__145C0A3F" />
+        <AssociationConnector Association="CkpModel.FK__DonGiaBom__CongT__6166761E" />
+        <AssociationConnector Association="CkpModel.FK__NguoiLien__Khach__173876EA" />
+        <EntityTypeShape EntityType="CkpModel.ViTriBom" Width="1.5" PointX="8.25" PointY="3.875" />
+        <AssociationConnector Association="CkpModel.FK__CongTrinh__Nguoi__1E6F845E" />
+        <EntityTypeShape EntityType="CkpModel.NhanLuc_BaoCao" Width="1.625" PointX="5.25" PointY="4.875" />
+        <AssociationConnector Association="CkpModel.FK__NhanLuc_B__BaoCa__35BCFE0A" />
+        <AssociationConnector Association="CkpModel.FK__NhanLuc_B__NhanV__36B12243" />
+        <EntityTypeShape EntityType="CkpModel.ViTriBom_BaoCao" Width="1.625" PointX="10.5" PointY="8.25" />
+        <AssociationConnector Association="CkpModel.FK__ViTriBom___BaoCa__2E1BDC42" />
+        <AssociationConnector Association="CkpModel.FK__ViTriBom___DonGi__0697FACD" />
+        <AssociationConnector Association="CkpModel.FK__ViTriBom___ViTri__2F10007B" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
